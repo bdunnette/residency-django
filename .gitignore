@@ -1,4 +1,6 @@
 *.log
 *.pot
 *.pyc
+*.sqlite
+*.sqlite-journal
 local_settings.py
