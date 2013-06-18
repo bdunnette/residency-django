@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load cms_tags %}
+{% load webdesign %}
 
 {% block base_content %}
-  {% placeholder template_1_content %}
+  <font style="font-size:120%;">{% placeholder top_content %}</font>
+  <div class="row">
+	<div class="span4" id="column1">{% lorem 1 p random %}</div>
+	<div class="span4" id="column2">{% lorem 1 p random %}</div>
+	<div class="span4" id="column3">{% lorem 1 p random %}</div>
+  </div>
 {% endblock %}
