@@ -3,4 +3,5 @@
 *.pyc
 *.sqlite
 *.sqlite-journal
+static/
 local_settings.py

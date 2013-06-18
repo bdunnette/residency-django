@@ -1,12 +1,25 @@
 {% load cms_tags sekizai_tags %}
+{% load menu_tags %}
+{% load bootstrap_toolkit %}
 <html>
   <head>
       {% render_block "css" %}
+      {% bootstrap_stylesheet_tag %}
+      {% bootstrap_stylesheet_tag "responsive" %}
+      {% bootstrap_javascript_tag %}
   </head>
   <body>
       {% cms_toolbar %}
-      {% placeholder base_content %}
-      {% block base_content %}{% endblock %}
+      <div class="navbar">
+	<div class="navbar-inner">
+	<ul class="nav">
+		{% show_menu 0 100 100 100 %}
+	</ul>
+	</div>
+      </div>  
+      <div class="container">
+      <div class="row span12">{% placeholder base_content %}</div>
+      <div class="row span12">{% block base_content %}{% endblock %}</div>
       {% render_block "js" %}
   </body>
 </html>
